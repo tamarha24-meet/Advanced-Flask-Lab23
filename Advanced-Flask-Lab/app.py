@@ -13,7 +13,10 @@ image_link = "https://uploads-ssl.webflow.com/5dd64bd3a930f9d04abd1363/5de254f85
 
 user_bio = "Middle East Entrepreneurs of Tomorrow. Enabling the next generation of Israeli and Palestinian leaders."
 
-
+ig_link = "https://www.instagram.com/meet_education/"
+twt_link = "https://twitter.com/MEET_Education"
+fb_link = "https://twitter.com/MEET_Education"
+em_link = "http://youtube.com/meet"
 posts = {
     "https://imageio.forbes.com/blogs-images/samarmarwan/files/2018/03/MEET-Students-1200x800.jpg": "Group projects <3",
     "https://uploads-ssl.webflow.com/5dd64bd3a930f96c82bd137a/63024ce64d943673cb004a4c_2022.07.17%20-%20Summer%20Day%201.png": "MEET summer!",
@@ -23,7 +26,7 @@ posts = {
 #####
 @app.route('/')
 def image():
-    return render_template('index.html', image_link = image_link,  user_bio = user_bio, posts = posts)
+    return render_template('index.html', image_link = image_link,  user_bio = user_bio, posts = posts, twitter = twt_link, instagram = ig_link, facebook = fb_link, email = em_link)
 
 
 

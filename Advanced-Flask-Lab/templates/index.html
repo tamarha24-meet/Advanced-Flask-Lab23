@@ -22,11 +22,11 @@
             <!--  -->
             <br> <br>
 						<ul class="icons">
-							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="{{twitter}}" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="{{facebook}}" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="{{instagram}}" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-							<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="{{email}}" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 						</ul>
 					</header>
 
@@ -41,7 +41,8 @@
                         <img src="{{image_link}}" alt="" />
                         <h3>changed image</h3>
                       </a>
-                
+                </div>      
+                <div>
                       <a href="">
                         <img src="{{url_for('static',filename='images/thumbs/02.jpg')}}" alt="" />
                         <h3>Caption... blah blah blah</h3>
@@ -53,14 +54,19 @@
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 </div> 
+                </section>
 
-                <div>
+                <section class="thumbnails">
+
+                
                 			{% for post in posts %}
+                			<div>
 
                 			<a href="">
                         <img src="{{post}}" alt="" />
                         <h3> {{posts[post]}} </h3>
                       </a> 
+                      </div>
 
                      {% endfor %}
 
